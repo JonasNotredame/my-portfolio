@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import profileImg from "../assets/profile.jpeg";
 import "./HomePage.scss";
 
 function HomePage() {
@@ -6,7 +7,7 @@ function HomePage() {
   return (
     <div className="home-page">
       <img
-        src="src/assets/profile.jpeg"
+        src={profileImg}
         alt="profile"
         className="profile-image"
       />
