@@ -1,0 +1,13 @@
+.custom-button {
+    width: fit-content;
+    padding: var(--base-spacing-half) var(--base-spacing);
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    border-radius:.375rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
