@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import profileImg from "../assets/profile.jpeg";
+import profileImg from "src/assets/profile.jpeg";
 import "./HomePage.scss";
 
 function HomePage() {
