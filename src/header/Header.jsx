@@ -22,11 +22,12 @@ function Header() {
 
   return (
     <div className="header">
-      <Button
+      {/* <Button
         className="header-title"
         onClick={() => navigate("/my-portfolio/")}
         text={t("HEADER_TITLE")}
-      />
+      /> */}
+      <h1 className="header-title" onClick={() => navigate("/my-portfolio/")}>{t("HEADER_TITLE")}</h1>
       <nav className="header-nav">
         <ul className="header-nav-list">
           <li className="header-nav-item">
