@@ -5,9 +5,10 @@
     border: 2px solid var(--text-color);
     border-radius:.375rem;
     transition: background-color 0.3s, color 0.3s;
+    color: var(--text-color);
 }
 
 .custom-button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--text-color-transparent);
     cursor: pointer;
 }

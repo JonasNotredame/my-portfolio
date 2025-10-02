@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "../../pages/home/HomePage";
 import Header from "../../header/Header";
 import "./Router.scss";
@@ -12,7 +12,12 @@ function Router() {
       <Header />
       <div className="webcontent">
         <Routes>
-          <Route path="/my-portfolio/" element={<HomePage />} />
+          <Route
+            exact
+            path="/"
+            element={<Navigate to="/my-portfolio/home" />}
+          />
+          <Route path="/my-portfolio/home" element={<HomePage />} />
           <Route path="/my-portfolio/about" element={<AboutPage />} />
           <Route path="/my-portfolio/projects" element={<ProjectsPage />} />
           <Route path="/my-portfolio/contact" element={<ContactPage />} />
