@@ -1,8 +1,5 @@
 .lang-switch {
-  position: absolute;
-  top: var(--base-spacing-oneandhalf);
-  right: var(--base-spacing);
-  
+  padding: var(--base-spacing);
   & > *:first-child {
     border-right-width: 1px;
     border-radius: 0.375rem 0 0 0.375rem;

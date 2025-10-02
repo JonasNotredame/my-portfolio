@@ -1,15 +1,11 @@
 .header {
-  position: relative;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--base-spacing);
-}
-
-.header-nav {
-  display: flex;
-  gap: var(--base-spacing);
-  margin: 0 auto;
+  width: 100%;
+  z-index: 1000;
 }
 
 .header-nav-item {

@@ -7,9 +7,7 @@ function Header() {
   const { t } = useTranslation();
 
   return (
-    <>
-      <div className="header">
-        <nav className="header-nav">
+        <nav className="header">
           <NavLink className="header-nav-item" to="my-portfolio/home">
             {t("HEADER_NAV_HOME")}
           </NavLink>
@@ -22,10 +20,8 @@ function Header() {
           <NavLink className="header-nav-item" to="my-portfolio/contact">
             {t("HEADER_NAV_CONTACT")}
           </NavLink>
+          <LanguageSwitch />
         </nav>
-      </div>
-      <LanguageSwitch />
-    </>
   );
 }
 
