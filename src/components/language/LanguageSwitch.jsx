@@ -1,6 +1,7 @@
 import "./LanguageSwitch.scss";
 import { useTranslation } from "react-i18next";
-import Button from "../button/Button";
+
+const LANGUAGES = ["nl", "en"];
 
 function LanguageSwitch() {
   const { i18n } = useTranslation();
@@ -12,16 +13,17 @@ function LanguageSwitch() {
 
   return (
     <div className="lang-switch">
-      <Button
-        className={`lang-toggle ${i18n.language === "nl" ? "active" : ""}`}
-        onClick={() => setLanguage("nl")}
-        text={"nl"}
-      />
-      <Button
-        className={`lang-toggle ${i18n.language === "en" ? "active" : ""}`}
-        onClick={() => setLanguage("en")}
-        text={"en"}
-      />
+      {LANGUAGES.map((lng) => (
+        <button
+          key={lng}
+          onClick={() => setLanguage(lng)}
+          className={`lang-switch-button ${
+            i18n.resolvedLanguage === lng ? "active" : ""
+          }`}
+        >
+          {lng}
+        </button>
+      ))}
     </div>
   );
 }

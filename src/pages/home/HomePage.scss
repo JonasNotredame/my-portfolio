@@ -1,22 +1,51 @@
 .home-page {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--base-spacing-double);
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.intro-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
   gap: var(--base-spacing-double);
-  justify-content: center;
+  max-width: 600px;
+  padding-top: var(--base-spacing);
+
+  @media (max-width: 768px) {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .profile-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 50%;
+  height: auto;
   object-fit: cover;
-  margin-bottom: 20px;
-  border: 8px solid #ffffff;
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+        width: 100%;
+    }
 } 
 
 .intro-name {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
+  color: var(--color-accent);
+}
+
+.badge{
+  background-color: rgb(255, 203, 112);
+  color: #000;
+  font-size: 16px;
+  padding:4px;
+  border-radius: 4px;
+  width: fit-content;
 }

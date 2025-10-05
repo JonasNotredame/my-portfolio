@@ -10,11 +10,6 @@ body {
 }
 
 :root {
-  --font-family: 'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', monospace;
-  --font-size: 18px;
-  --text-color: #ffffff;
-  --text-color-transparent: rgba(255, 255, 255, 0.28);
-  --text-color-secondary: #ffffff;
   --base-spacing: 16px;
   --base-spacing-half: 8px;
   --base-spacing-double: 32px;
@@ -25,12 +20,12 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  color: var(--text-color);
+  font-family: Poppins, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #fff;
   font-weight: 300;
   width: 100%;
-  min-height: 100vh;
-  background-color: black;
+  height: 100%;
+  background-color: #252525;
   overflow: hidden;
 }

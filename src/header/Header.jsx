@@ -1,27 +1,34 @@
-import { useTranslation } from "react-i18next";
 import "./Header.scss";
-import { NavLink } from "react-router-dom";
 import LanguageSwitch from "../components/language/LanguageSwitch";
+import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import NavigationLinks from "./navigation/NavigationLinks";
 
 function Header() {
-  const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-        <nav className="header">
-          <NavLink className="header-nav-item" to="my-portfolio/home">
-            {t("HEADER_NAV_HOME")}
-          </NavLink>
-          <NavLink className="header-nav-item" to="my-portfolio/about">
-            {t("HEADER_NAV_ABOUT")}
-          </NavLink>
-          <NavLink className="header-nav-item" to="my-portfolio/projects">
-            {t("HEADER_NAV_PROJECTS")}
-          </NavLink>
-          <NavLink className="header-nav-item" to="my-portfolio/contact">
-            {t("HEADER_NAV_CONTACT")}
-          </NavLink>
+    <nav className="header">
+      <div className="header-content">
+        <NavigationLinks />
+        <LanguageSwitch />
+      </div>
+
+      {/* Mobile menu */}
+      <button
+        className="mobile-menu-button"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        <MenuIcon fontSize="large" />
+      </button>
+      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
+        <div className="mobile-menu-content">
+          <NavigationLinks onClick={() => setIsOpen(false)} />
           <LanguageSwitch />
-        </nav>
+        </div>
+      </div>
+    </nav>
   );
 }
 

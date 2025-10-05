@@ -1,5 +1,11 @@
 .lang-switch {
+  position: absolute;
+  top: 50%;
+  right: var(--base-spacing-double);
+  transform: translateY(-50%);
+  display: flex;
   padding: var(--base-spacing);
+
   & > *:first-child {
     border-right-width: 1px;
     border-radius: 0.375rem 0 0 0.375rem;
@@ -10,8 +16,26 @@
     border-radius: 0 0.375rem 0.375rem 0;
   }
 
-  .active {
-    background-color: white;
-    color: black;
+  @media (max-width: 768px) {
+    position: relative;
+    right: auto;
+  }
+}
+
+.lang-switch-button {
+  padding: var(--base-spacing-half) var(--base-spacing);
+  border: 1px solid #fff;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #252525;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffbdbd;
+  }
+
+  &.active {
+    background-color: #ff2a00;
+    color: #fff;
   }
 }

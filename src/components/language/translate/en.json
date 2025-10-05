@@ -4,7 +4,6 @@
   "HEADER_NAV_ABOUT": "About",
   "HEADER_NAV_PROJECTS": "Projects",
   "HEADER_NAV_CONTACT": "Contact",
-  "HOME_INTRO_PRE": "Hello, I am",
   "HOME_INTRO_NAME": "Jonas Notredame",
-  "HOME_INTRO_POST": "I am a full-stack developer."
+  "HOME_INTRO_ROLE": "Full-Stack Developer"
 }
