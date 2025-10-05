@@ -14,7 +14,7 @@ function Router() {
         <Routes>
           <Route
             exact
-            path="/"
+            path="/my-portfolio/"
             element={<Navigate to="/my-portfolio/home" />}
           />
           <Route path="/my-portfolio/home" element={<HomePage />} />
